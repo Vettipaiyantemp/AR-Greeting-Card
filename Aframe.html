@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <!-- Replace with your own video link -->
+        <video id="myVideo" autoplay loop="true" src="https://drive.google.com/file/d/1i7-KKrXiZuAkHQxv38sQJkG_RmpvBV_C/view?usp=sharing"></video>
+      </a-assets>
+      
+      <!-- Place the video in AR -->
+      <a-video src="#myVideo" position="0 1.5 -3" width="4" height="2.25"></a-video>
+      
+      <!-- Add a floor so it looks natural -->
+      <a-plane position="0 0 -3" rotation="-90 0 0" width="10" height="10" color="#cccccc"></a-plane>
+      
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
