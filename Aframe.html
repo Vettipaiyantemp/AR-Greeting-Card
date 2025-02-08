@@ -4,18 +4,20 @@
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene>
+    <a-scene embedded>
       <a-assets>
-        <!-- Replace with your own video link -->
-        <video id="myVideo" autoplay loop="true" src="https://drive.google.com/file/d/1i7-KKrXiZuAkHQxv38sQJkG_RmpvBV_C/view?usp=sharing"></video>
+        <!-- Google Drive Direct MP4 Video -->
+        <video id="myVideo" autoplay loop="true" muted playsinline crossorigin="anonymous">
+          <source src="https://drive.google.com/uc?export=download&id=1i7-KKrXiZuAkHQxv38sQJkG_RmpvBV_C" type="video/mp4">
+        </video>
       </a-assets>
-      
-      <!-- Place the video in AR -->
+
+      <!-- Display the Video in AR -->
       <a-video src="#myVideo" position="0 1.5 -3" width="4" height="2.25"></a-video>
-      
-      <!-- Add a floor so it looks natural -->
+
+      <!-- Add a floor for realism -->
       <a-plane position="0 0 -3" rotation="-90 0 0" width="10" height="10" color="#cccccc"></a-plane>
-      
+
       <a-sky color="#ECECEC"></a-sky>
     </a-scene>
   </body>
